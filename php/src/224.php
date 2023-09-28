@@ -35,5 +35,7 @@
             echo $resultado;
         }
         ?>
+    </body>
+</html>
         
         
