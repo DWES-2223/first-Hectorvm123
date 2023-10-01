@@ -69,11 +69,11 @@ function llevaDavant(int $num, int $cant): int {
     return (int)$nuevaCadena;
 }
 
-function euro2peseta(int $euro,$cotitzacion = 166.386): float {
-    return $euro * 166.386;
+function euro2peseta(int $euro,$cotitzacion = 166): float {
+    return $euro * $cotitzacion;
 }
 
 function peseta2euro(int $peseta): float {
-    return $peseta / 166.386;
+    return $peseta / 166;
 }
 ?>

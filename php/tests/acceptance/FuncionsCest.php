@@ -1,8 +1,7 @@
 <?php
 
-class FuncionsCest
+/* class FuncionsCest
 {
-    /*
     public function _before(AcceptanceTester $I)
     {
     }
@@ -95,9 +94,9 @@ class FuncionsCest
         $I->fillField('password', 'natxo');
         $I->click('submit');
         $I->see('Benvingut ignasi');
-    }
+    } */
 
-    public function try251WorksTest(AcceptanceTester $I)
+    /* public function try251WorksTest(AcceptanceTester $I)
     {
         $I->amOnPage('/251.php');
         $I->fillField('frase', 'Hola Amiga');
@@ -107,8 +106,6 @@ class FuncionsCest
         $I->see('Hi ha 3 a');
         $I->see('Hi ha 1 i');
         $I->see('Hi ha 5 vocals');
-    }
-    */
-
-
+    } 
 }
+    */

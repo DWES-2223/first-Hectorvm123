@@ -8,6 +8,7 @@
     <body>
         <?php
         extract($_POST);
+        
         $i = 0;
         $totalEuro = 0;
         $totalPeseta = 0;
@@ -22,12 +23,12 @@
             <?php
             while ($i<(count($_POST)-1)/2){
                 $totalEuro += (float)$_POST["preu$i"];
-                $totalPeseta += (float)$_POST["preu$i"]*166.386;
+                $totalPeseta += (float)$_POST["preu$i"]*166;
             ?>
             <tr>
                 <td><?php echo $_POST["nom$i"];?></td>
                 <td><?php echo $_POST["preu$i"];?></td>
-                <td><?php echo ((int)$_POST["preu$i"]*166.386);?></td>
+                <td><?php echo ((float)$_POST["preu$i"]*166);?></td>
             </tr>
             <?php
             $i++;
