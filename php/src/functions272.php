@@ -3,48 +3,30 @@ function fecha_inglesa($fecha){
     $fechaArray = explode(".", $fecha);
     return implode("/", array_reverse($fechaArray));
 }
+function vell($fechas){
+    $fechasInglesas = [];
 
-function vell($records){
-    $fechas = [];
-
-    foreach($records as $record){
-        $prueba = array_search($record, $records);
-        $fechas[$prueba]=  fecha_inglesa($record["data"]);
+    foreach($fechas as $fecha){
+        $prueba = array_search($fecha, $fechas);
+        $fechasInglesas[$prueba]=  fecha_inglesa($fecha);
     }
-    return array_search(min($fechas), $fechas);
+    return array_search(min($fechasInglesas), $fechasInglesas);
 }
 
 
 function laureado($records) {
     $ciudades = [];
-    $clubs = [];
-    $atletas = [];
+    
 
     foreach($records as $record){
-        if(isset($ciudades[$record["lloc"]])){
-            $ciudades[$record["lloc"]]++;
+        if(array_key_exists($record, $ciudades)){
+            $ciudades[$record]++;
         } else {
-            $ciudades[$record["lloc"]] = 1;
-        }
-
-        if(isset($atletas[$record["atleta"]])){
-            $atletas[$record["atleta"]]++;
-        } else {
-            $atletas[$record["atleta"]] = 1;
-        }
-
-        if(isset($clubs[$record["club"]])){
-            $clubs[$record["club"]]++;
-        } else {
-            $clubs[$record["club"]] = 1;
+            $ciudades[$record] = 1;
         }
     }
-
-    $club = array_search(max($clubs), $clubs);
-    $atleta = array_search(max($atletas), $atletas);
-    $ciudad = array_search(max($ciudades), $ciudades);
-
-    return ["ciudad" => $ciudad, "atleta" => $atleta, "club" => $club];
+    
+    return array_search(max($ciudades), $ciudades);
 
 }
 

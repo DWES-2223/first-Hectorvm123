@@ -1,10 +1,6 @@
+tests/unit/ExamenTest.php:test273Jove
 tests/unit/FunctionsTest.php:test242Digits
 tests/unit/FunctionsTest.php:test242LlevaDarrere
-tests/unit/ExamenTest.php:test272FecIng
-tests/unit/ExamenTest.php:test272Vell
-tests/unit/ExamenTest.php:test272Laureado
-tests/unit/ExamenTest.php:test273Jove
-tests/unit/ExamenTest.php:test273Any
 tests/unit/FunctionsTest.php:test240countParells
 tests/unit/FunctionsTest.php:test242DigitsN
 tests/unit/FunctionsTest.php:test243peseta2Euros
